@@ -1,7 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+/* npm install tailwindcss-animate */
 
-@custom-variant dark (&:where(.dark, dark *));
+@variant dark (&:where(.dark, .dark *));
 
-html, body, #root {
-    height: 100%;
+@theme {
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #1a202c;
+}
+
+body {
+    @apply font-sans;
+    background-color: var(--color-bg-light);
+}
+
+.dark body {
+    background-color: var(--color-bg-dark);
 }
