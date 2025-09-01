@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Toggle from "./components/Toggle.jsx";
+import Toggle from "./Toggle.jsx";
 
 function Header() {
   // État du thème avec vérification côté client
@@ -21,6 +21,7 @@ function Header() {
     setDarkMode(!darkMode);
     console.log("darkMode actuel:", darkMode);
   };
+
   return (
     <div>
       <header className="flex items-center justify-between p-4">
